@@ -31,6 +31,13 @@ main = ucspiClient $ \ _ rdH wrH -> do
   putStrLn ln
 ~~~~
 
+To test this with a TCP connection, use
+[`tcpclient`](http://cr.yp.to/ucspi-tcp/tcpclient.html):
+
+~~~~{.bash}
+tcpclient 127.0.0.1 9999 runhaskell sampleclient.hs
+~~~~
+
 ## Sample Server
 
 A server which receives a line from the client and sends back the
@@ -41,4 +48,11 @@ import Network.UCSPI (ucspiServer)
 
 main :: IO ()
 main = ucspiServer $ \ _ -> getLine >>= putstrLn
+~~~~
+
+To test this with a TCP connection, use
+[`tcpserver`](http://cr.yp.to/ucspi-tcp/tcpserver.html)
+
+~~~~{.bash}
+tcpserver 127.0.0.1 9999 runhaskell sampleserver.hs
 ~~~~
