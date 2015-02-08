@@ -1,7 +1,16 @@
 name:                ucspi-hs
 version:             0.1.0.0
-synopsis:            A small Haskell interface to writing @ucspi@-conformant applications
--- description:
+synopsis:            Haskell helpers for UCSPI applications
+description:         The @ucspi-hs@ package contains a few small helper functions for
+                     writing clients and servers that are intended for use with the
+                     <http://cr.yp.to/proto/ucspi.txt UCSPI interface>. This is a
+                     Unix-oriented interface in which an external application manages
+                     network connections and passes them off to another program which
+                     is given the relevant sockets as typical Unix file descriptors.
+                     This is a convenient way of building small servers without the
+                     boilerplate of socket management, and allows a given application
+                     to be trivially reused with different underlying network
+                     interfaces.
 license:             BSD3
 license-file:        LICENSE
 author:              Getty Ritter
