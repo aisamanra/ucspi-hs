@@ -1,4 +1,4 @@
-name:                ucspi-hs
+name:                ucspi-examples
 version:             0.1.0.0
 synopsis:            Haskell helpers for UCSPI applications
 description:         The @ucspi-hs@ package contains a few small helper functions for
@@ -20,7 +20,7 @@ category:            Network
 build-type:          Simple
 cabal-version:       >=1.10
 
-library
-  exposed-modules:     Network.UCSPI
-  build-depends:       base >=4.7 && <5, unix >=2.7 && <2.8
-  default-language:    Haskell2010
+executable echo
+  hs-source-dirs: echo
+  main-is: Main.hs
+  build-depends: base, ucspi-hs

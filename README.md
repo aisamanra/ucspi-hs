@@ -47,7 +47,7 @@ same line before closing the connection looks like
 import Network.UCSPI (ucspiServer)
 
 main :: IO ()
-main = ucspiServer $ \ _ -> getLine >>= putstrLn
+main = ucspiServer $ \ _ -> getLine >>= putStrLn
 ~~~~
 
 To test this with a TCP connection, use
